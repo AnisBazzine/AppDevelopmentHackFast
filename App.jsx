@@ -12,7 +12,6 @@ export default function App() {
       setSplashVisible(false)
     }, 3000);
   },[]);
-
   return (
     <View style={styles.container}>
       {splashVisible?(
