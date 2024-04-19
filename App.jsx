@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
 import Splash from "./src/screens/Splash";
 import TabsButtoms from "./src/navigation/TabsButtoms";
