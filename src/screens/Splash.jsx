@@ -1,9 +1,8 @@
-import React, { useEffect, useRef } from 'react';
-import { View, Image, Animated, StyleSheet, Text } from 'react-native';
-
+import React, { useEffect, useRef } from "react";
+import { View, Animated, StyleSheet, Text } from "react-native";
+import colors from "../styles/Colors";
 const Splash = () => {
   const scaleValue = useRef(new Animated.Value(0)).current;
-
   useEffect(() => {
     Animated.timing(scaleValue, {
       toValue: 2,
@@ -11,11 +10,10 @@ const Splash = () => {
       useNativeDriver: true,
     }).start();
   }, []);
-
   return (
     <View style={styles.container}>
       <Animated.Image
-        source={require('../assets/uniLogo.png')} 
+        source={require("../assets/uniLogo.png")}
         style={[styles.image, { transform: [{ scale: scaleValue }] }]}
       />
       <Text style={styles.developedByText}>Developed by UnderScore Team</Text>
@@ -26,19 +24,19 @@ const Splash = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   image: {
     width: 200,
     height: 200,
-    resizeMode: 'contain',
+    resizeMode: "contain",
   },
   developedByText: {
-    position: 'absolute',
+    position: "absolute",
     bottom: 25,
     fontSize: 16,
-    color: 'white',
+    color: colors.white,
   },
 });
 

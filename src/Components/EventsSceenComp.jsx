@@ -1,10 +1,16 @@
-import React from 'react';
-import { View, Text, StyleSheet, FlatList, TouchableOpacity, Image } from 'react-native';
-import { eventsData } from '../data/eventsData';
-import colors from '../styles/Colors';
+import React from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  FlatList,
+  TouchableOpacity,
+  Image,
+} from "react-native";
+import { eventsData } from "../data/eventsData";
+import colors from "../styles/Colors";
 
 const EventsSceenComp = ({ item, onPress }) => (
-    
   <View onPress={() => onPress(item)} style={styles.eventItem}>
     <Image source={item.image} style={styles.eventImage} />
     <View style={styles.eventInfo}>
@@ -20,10 +26,8 @@ const EventsSceenComp = ({ item, onPress }) => (
 
 const EventsCompScreen = () => {
   const handleEventPress = (item) => {
-    // Implement navigation or display more details logic here
     console.warn("More details for:", item.title);
   };
-
 
   return (
     <View style={styles.container}>
@@ -41,29 +45,29 @@ const EventsCompScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   title: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 20,
   },
   eventList: {
-    width: '100%',
+    width: "100%",
   },
   eventItem: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     marginBottom: 20,
-    backgroundColor: '#f0f0f0',
+    backgroundColor: "#f0f0f0",
     borderRadius: 8,
-    overflow: 'hidden',
+    overflow: "hidden",
   },
   eventImage: {
     width: 100,
     height: 100,
-    resizeMode: 'cover',
+    resizeMode: "cover",
   },
   eventInfo: {
     flex: 1,
@@ -71,11 +75,11 @@ const styles = StyleSheet.create({
   },
   eventTitle: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   eventDate: {
     fontSize: 16,
-    color: 'gray',
+    color: "gray",
     marginBottom: 5,
   },
   eventDescription: {

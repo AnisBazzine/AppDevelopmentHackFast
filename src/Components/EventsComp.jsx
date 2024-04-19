@@ -1,43 +1,50 @@
-import React from 'react';
-import { StyleSheet, View, Text, Image, TouchableOpacity, SafeAreaView} from 'react-native';
-import globalStyles from '../styles/globalStyles';
-import colors from '../styles/Colors';
+import React from "react";
+import {
+  StyleSheet,
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  SafeAreaView,
+} from "react-native";
+import globalStyles from "../styles/globalStyles";
+import colors from "../styles/Colors";
 
 const EventsComp = ({ data }) => {
   const { title, desc, date, image } = data;
 
   const handlePress = () => {
-    console.warn('Show More...')
+    console.warn("Show More...");
   };
 
   return (
     <SafeAreaView>
-    <View style={styles.container}>
-      <Image source={image } style={styles.image} />
-      <View style={styles.content}>
-        <Text style={styles.title}>{title}</Text>
-        <Text style={styles.desc}>{desc}</Text>
-        <Text style={styles.date}>{date}</Text>
-        <TouchableOpacity onPress={handlePress} style={styles.button}>
-          <Text style={styles.buttonText}>See More</Text>
-        </TouchableOpacity>
+      <View style={styles.container}>
+        <Image source={image} style={styles.image} />
+        <View style={styles.content}>
+          <Text style={styles.title}>{title}</Text>
+          <Text style={styles.desc}>{desc}</Text>
+          <Text style={styles.date}>{date}</Text>
+          <TouchableOpacity onPress={handlePress} style={styles.button}>
+            <Text style={styles.buttonText}>See More</Text>
+          </TouchableOpacity>
+        </View>
       </View>
-    </View>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     marginBottom: 20,
     marginRight: 10,
   },
   image: {
     width: 100,
     height: 100,
-    resizeMode: 'contain',
+    resizeMode: "contain",
     borderRadius: 5,
   },
   content: {
@@ -46,7 +53,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 5,
   },
   desc: {
@@ -55,7 +62,7 @@ const styles = StyleSheet.create({
   },
   date: {
     fontSize: 14,
-    color: 'gray',
+    color: "gray",
     marginBottom: 5,
   },
   button: {
@@ -67,8 +74,8 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: colors.secondary,
-    fontWeight: 'bold',
-    textAlign: 'center',
+    fontWeight: "bold",
+    textAlign: "center",
   },
 });
 

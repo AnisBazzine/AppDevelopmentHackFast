@@ -1,7 +1,7 @@
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
-import { newsData } from '../data/newsData';
-import colors from '../styles/Colors';
+import React from "react";
+import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
+import { newsData } from "../data/newsData";
+import colors from "../styles/Colors";
 
 const NewsScreenComp = ({ item, onPress }) => (
   <TouchableOpacity onPress={() => onPress(item)} style={styles.newsItem}>
@@ -19,17 +19,17 @@ const NewsScreenComp = ({ item, onPress }) => (
 
 const styles = StyleSheet.create({
   newsItem: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     marginBottom: 20,
-    backgroundColor: '#f0f0f0',
+    backgroundColor: "#f0f0f0",
     borderRadius: 8,
-    overflow: 'hidden',
+    overflow: "hidden",
   },
   newsImage: {
     width: 100,
     height: 100,
-    resizeMode: 'contain',
+    resizeMode: "contain",
   },
   newsInfo: {
     flex: 1,
@@ -37,14 +37,14 @@ const styles = StyleSheet.create({
   },
   newsTitle: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   newsDesc: {
     fontSize: 16,
   },
   newsDate: {
     fontSize: 16,
-    color: 'gray',
+    color: "gray",
     marginBottom: 5,
   },
   moreDetails: {
